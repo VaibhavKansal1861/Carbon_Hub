@@ -1,0 +1,267 @@
+/* Base styles */
+html, body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E4EBF2;
+  max-height: 70px; /* Adjust as needed */
+  padding: 7px; /* Adjust padding as needed */
+  width: 100%;
+  
+}
+
+.logo {
+  font-weight: 700;
+  font-family: "Montagu Slab";
+  font-size: 35px; /* Adjust as needed */
+  margin-top:0; /* Adjust margin as needed */
+  margin-left: 2%;
+  padding: 0%;
+}
+
+.navbar-options a {
+  display: flex;
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-family: "Inter";
+  font-size: 15px; /* Adjust font size as needed */
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+
+}
+
+.navbar-options a:hover {
+  color: #4CAF4F;
+}
+
+.loginAndSignUp {
+  display: flex;
+  gap: 20px; /* Adjust gap between buttons */
+  margin-top: 0%; /* Adjust margin-top as needed */
+  
+}
+
+.login, .signup {
+  padding: 10px 30px; /* Adjust padding as needed */
+  font-size: 14px; /* Adjust font size as needed */
+  font-family: "Inter";
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+ 
+}
+
+.login:hover, .signup:hover {
+  color: #4CAF4F;
+}
+
+.nav-toggle {
+  display: none;
+}
+.navbar-options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+/* Display nav-toggle on smaller screens */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+    margin-top: 1%;
+    margin-right: 20px;
+  }
+.logo{
+  margin-left: 15px;
+}
+  .navbar-options {
+    display: flex;
+    flex-direction:column;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen */
+    height: 40vh; /* Full height of viewport */
+    width: 50%; /* Adjust width as needed */
+    background-color: #E4EBF2;
+    padding-top: 70px; /* Adjust padding-top as needed */
+    transition: right 0.3s ease; /* Smooth animation for sliding in */
+    z-index: 1000; /* Ensure it overlays other content */
+   
+  }
+
+  .navbar-options.open {
+    right: 0; /* Slide in from the right when open */
+    flex-direction: column;
+  }
+
+  .navbar-options a:hover {
+    height: auto; /* Adjust height or other styles as needed for smaller screens */
+    padding: 15px 20px; /* Adjust padding as needed */
+    color: #4CAF4F;
+  }
+
+  .loginAndSignUp {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .navbar{
+    width:100%;
+  }
+ 
+}
+
+/* Additional Media Queries for Smaller Screens */
+@media (max-width: 425px) {
+  .navbar-options a {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .logo{
+    font-size: 25px;
+  }
+    .navbar-options {
+ 
+      justify-content: space-around;
+      align-items: center;
+      
+    }
+  
+  .navbar-options.open {
+    right: 0; /* Slide in from the right when open */
+  }
+
+  .loginAndSignUp {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .nav-toggle {
+ margin-top:1%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar {
+    padding: 8px;
+  }
+
+  .navbar-options a {
+    padding: 8px; /* Further adjust padding for smallest screens */
+  }
+
+  .navbar-options {
+    width: 70%; /* Adjust width as needed */
+  }
+
+  .navbar-options.open {
+    right: 0; /* Slide in from the right when open */
+  }
+
+  .navbar-options a:hover {
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  .loginAndSignUp {
+    align-items: flex-end;
+    flex-direction: row;
+   
+  }
+
+  .nav-toggle {
+    margin-top: 2%;
+    margin-left: 15px;
+  }
+  .logo{
+    font-size: 30px;
+    margin-left: 0%;
+    font-weight: bold;
+  }
+  .login,.signup{
+    padding: 10px 25px; /* Adjust padding as needed */
+  font-size: 14px; 
+  }
+  }
+  @media (max-width: 425px) {
+    .navbar-options a {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .logo{
+      font-size: 25px;
+    }
+      .navbar-options {
+   
+        justify-content: space-around;
+        align-items: center;
+        
+      }
+    
+    .navbar-options.open {
+      right: 0; /* Slide in from the right when open */
+    }
+  
+    .loginAndSignUp {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  
+    .nav-toggle {
+      margin-top:2%;
+      margin-right: 10px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .navbar {
+      padding: 8px;
+    }
+  
+    .navbar-options a {
+      padding: 8px; /* Further adjust padding for smallest screens */
+    }
+  
+    .navbar-options {
+      width: 70%; /* Adjust width as needed */
+    }
+  
+    .navbar-options.open {
+      right: 0; /* Slide in from the right when open */
+    }
+  
+    .navbar-options a:hover {
+      padding: 10px; /* Adjust padding as needed */
+    }
+  
+    .loginAndSignUp {
+      align-items: flex-end;
+      flex-direction: row;
+     
+    }
+  
+    .nav-toggle {
+      margin-top: 2%;
+      margin-right: 11.5px;
+    }
+    .logo{
+      font-size: 21px;
+    }
+    .login,.signup{
+      padding: 10px 15px; /* Adjust padding as needed */
+    font-size: 12px; 
+    }
+  }
+
+    
+  
